@@ -3,6 +3,7 @@ Resource     ../resources/_settings.resource
 
 *** Keywords ***
 Get Package Category Monomax
+    [Documentation]    Keyword ยิง API เช็ค package category ใน list platform
     FOR    ${platform}      IN    @{Platform}
         ${Package_category_path}=    Catenate    SEPARATOR=    ${PACKAGES_PATH_PREFIX}    ${platform}
 
@@ -16,10 +17,12 @@ Get Package Category Monomax
     END
 
 Validate Package Category Response
+    [Documentation]    Keyword log response package category แต่ละ platform
     [Arguments]    ${response}    ${platform}    ${category_id} 
     Log To Console     Get Package Category Response code: ${response.status_code}
     Should Be Equal As Integers    ${response.status_code}    200
 
+    #loop ดึงค่าใน range category_id มาเก็บไว้ใน index และ validate + log
     FOR    ${index}    IN RANGE    ${category_id} 
         ${json_response}=   Set Variable   ${response.json()}
         ${package_id}=      Json Value    ${json_response}    $.data.[${index}].id

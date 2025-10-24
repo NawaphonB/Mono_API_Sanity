@@ -3,24 +3,29 @@ Resource     ../resources/_settings.resource
 
 *** Keywords ***
 Get Profile Monomax
+    [Documentation]    Keyword ยิงเช็ค profile ของ data นั้นๆ
     RequestsLibrary.Create Session    Get_Profile    ${Base_url}    verify=${Verify_flag}    disable_warnings=${Warning_flag}    
     ${headers}=     Authorization Monomax
     ${response}=    RequestsLibrary.GET On Session    Get_Profile    ${Get_profile_path}    headers=${headers}
     Validate Get Profile Response    ${response}    
 
 Validate Get Profile Response
+    [Documentation]    Keyword log ค่าจาก get profile
     [Arguments]        ${response} 
     Log To Console     Get Profile Response code: ${response.status_code}
     Should Be Equal As Integers    ${response.status_code}    200
 
+    #ดึงค่าแต่ละ key มาตรวจสอบ
     ${json_response}=   Set Variable           ${response.json()}
     ${member_id}=       Json Value    ${json_response}    $.data.id
     ${username}=        Json Value    ${json_response}    $.data.username
     ${package_registered}=    Json Value    ${json_response}    $.data.package_registered
     ${member_tier}=      Json Value    ${json_response}    $.data.member_tier
 
+    #ถ้าเป็น free tier จะ log แค่นี้
     IF  ${package_registered}==${None}
         Log Success    \nProfile | User=${username} | Tier=${member_tier}
+    #ถ้าเป็น tier ที่มี package จะ log ผลตามนี้
     ELSE
         ${expire_flag}=     Json Value    ${json_response}    $.data.package_registered.is_expired
         ${cancel_flag}=     Json Value    ${json_response}    $.data.package_registered.is_canceled
