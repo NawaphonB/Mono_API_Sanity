@@ -1,0 +1,30 @@
+# ===== Environment / connection =====
+base_url: "https://staging.monomax.me/api/v2"
+verify_flag: false
+warning_flag: true
+
+# ===== Credentials =====
+username: "testlogin003"
+password: "123456"
+
+# ===== Paths =====
+login_path: "/account/login"
+get_profile_path: "/account/profile"
+packages_path_prefix: "/packages/"
+pre_purchase_path: "/packages/verify_prepurchase"
+
+# ===== Sports demo ids =====
+match_id: 06
+vod_id: 94
+
+# ===== Iteration params =====
+platform: [ios, android]
+category_ids: [1, 2]
+platform_prepurchase:   ios    
+SKU:  staging_recurring_sports_1d_1m299  
+
+# ===== Expectations =====
+expected_status_code: 200
+expected_status: "ok"
+#ACCESS_TOKEN:   "yUKrMSJNVRabvjNi5mC3hpbMkUmuDr0DDxoF7Jze"
+
