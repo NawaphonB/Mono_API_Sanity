@@ -22,4 +22,5 @@ Resource    Get_Sport.resource
 Variables   ../variables/${ENV}_data.yaml
 
 *** Variables ***
-${ENV}    staging        #staging/prod
+#เลือก ENV โดยการเปลี่ยนValue
+${ENV}    prod        #staging/prod
