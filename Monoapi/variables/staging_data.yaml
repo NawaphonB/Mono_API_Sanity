@@ -20,7 +20,7 @@ vod_id: 94
 # ===== Iteration params =====
 platform: [ios, android]
 category_ids: [1, 2]
-platform_prepurchase:   ios    
+platform_prepurchase:   ios  
 SKU:  staging_recurring_sports_1d_1m299  
 
 # ===== Expectations =====
