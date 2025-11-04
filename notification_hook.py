@@ -10,19 +10,27 @@ root = tree.getroot()
 
 fail_count = 0
 total_count = 0
+failed_tests = []
 
-for stat in root.findall(".//stat"):
-    if stat.attrib.get("fail") and stat.attrib.get("pass"):
-        fail_count += int(stat.attrib["fail"])
-        total_count += int(stat.attrib["fail"]) + int(stat.attrib["pass"])
+# ✅ Each <test> is a test case
+for test in root.findall(".//test"):
+    total_count += 1
+    test_name = test.attrib.get("name", "Unnamed Test")
+    status_tag = test.find("./status")
+    if status_tag is not None and status_tag.attrib.get("status") == "FAIL":
+        fail_count += 1
+        failed_tests.append(test_name)
+
+print(f"Fail count: {fail_count}, Total count: {total_count}")
+print("Failed tests:", failed_tests)
 
 if fail_count > 0:
+    failed_list = "\n".join([f"- {name}" for name in failed_tests])
     message = {
-        "text": f"🚨 Health check alert!!\n❌ {fail_count} test(s) failed out of {total_count}.\n📂"
+        "text": f"🚨 Health check alert!!\n❌ {fail_count} test(s) failed out of {total_count}.\n\nFailed tests:\n{failed_list}\n📂"
     }
+    response = requests.post(webhook_url, data=json.dumps(message), headers={'Content-Type': 'application/json'})
+    print(f"Webhook response: {response.status_code}, {response.text}")
 else:
-    message = {
-        "text": f"✅ Everything look fine!! \nAll {total_count} tests passed successfully!\n📂"
-    }
-
-requests.post(webhook_url, data=json.dumps(message), headers={'Content-Type': 'application/json'})
+    print("✅ No failures detected. No message sent.")
+    

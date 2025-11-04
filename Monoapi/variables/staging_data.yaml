@@ -12,6 +12,7 @@ login_path: "/account/login"
 get_profile_path: "/account/profile"
 packages_path_prefix: "/packages/"
 pre_purchase_path: "/packages/verify_prepurchase"
+live_tv_path: "/api/v2/livetv/home"
 
 # ===== Sports demo ids =====
 match_id: 06
