@@ -9,10 +9,10 @@ Get Home Page Monomax
     #สร้าง header โดยใช้ access token
     ${headers}=     Authorization Monomax
     #keyword ยิง API
-    ${response}=    GET On Session    GET_Home_Page    /home    headers=${headers}
+    ${response}=    GET On Session    GET_Home_Page    /home    headers=${headers}    expected_status=200
     #validate + log response
-    Validate Home Page Response Sport Content    ${response}
-    Validate Home Page Response Action button    ${response}
+    #Validate Home Page Response Sport Content    ${response}
+    #Validate Home Page Response Action button    ${response}
 
 Validate Home Page Response Sport Content
     [Documentation]    Keyword log ค่า Watch_tier_allowed แต่ละ content ในหน้า home

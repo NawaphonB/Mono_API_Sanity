@@ -17,6 +17,7 @@ Resource    Get_Package.resource
 Resource    Get_Prepurchase.resource
 Resource    Get_Profile.resource
 Resource    Get_Sport.resource
+Resource    Get_LiveTV.resource
 
 #Variables 
 Variables   ../variables/${ENV}_data.yaml

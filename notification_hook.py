@@ -27,7 +27,7 @@ print("Failed tests:", failed_tests)
 if fail_count > 0:
     failed_list = "\n".join([f"- {name}" for name in failed_tests])
     message = {
-        "text": f"🚨 Health check alert!!\n❌ {fail_count} test(s) failed out of {total_count}.\n\nFailed tests:\n{failed_list}\n📂"
+        "text": f"🚨 Health check alert!!\n❌ {fail_count} test(s) failed out of {total_count}.\n\nFailed tests📂:\n{failed_list}\n"
     }
     response = requests.post(webhook_url, data=json.dumps(message), headers={'Content-Type': 'application/json'})
     print(f"Webhook response: {response.status_code}, {response.text}")

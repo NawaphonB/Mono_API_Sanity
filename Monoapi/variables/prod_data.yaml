@@ -12,7 +12,7 @@ login_path: "/account/login"
 get_profile_path: "/account/profile"
 packages_path_prefix: "/packages/"
 pre_purchase_path: "/packages/verify_prepurchase"
-live_tv_path: "/api/v2/livetv/home"
+live_tv_path: "/livetv/home"
 
 # ===== Sports demo ids =====
 match_id: 06
@@ -27,5 +27,5 @@ SKU:  staging_recurring_sports_1d_1m299
 # ===== Expectations =====
 expected_status_code: 200
 expected_status: "ok"
-ACCESS_TOKEN:   "yUKrMSJNVRabvjNi5mC3hpbMkUmuDr0DDxoF7Jze"
+#ACCESS_TOKEN:   "yUKrMSJNVRabvjNi5mC3hpbMkUmuDr0DDxoF7Jze"
 
