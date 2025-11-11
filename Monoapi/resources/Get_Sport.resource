@@ -6,7 +6,7 @@ Get Sport Home Page Monomax
     [Documentation]    Keyword ยิงเช็คหน้า sport home 
     Create Session    GET_Sport_Home    ${Base_url}    verify=${Verify_flag}    disable_warnings=${Warning_flag}    
     ${headers}=     Authorization Monomax
-    ${response}=    GET On Session    GET_Sport_Home     /sports/home    headers=${headers}
+    ${response}=    GET On Session    GET_Sport_Home     /sports/home    headers=${headers}    expected_status=200
     Validate Sport Home Response    ${response}
 
 Validate Sport Home Response

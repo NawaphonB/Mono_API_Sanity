@@ -3,12 +3,23 @@ Resource     ../resources/_settings.resource
 
 *** Keywords ***
 POST Login Monomax
+    [Arguments]    ${username}    ${password}
     [Documentation]    Keyword ยิง post login เพื่อ get token
     RequestsLibrary.Create Session    POST_login    ${Base_url}    verify=${Verify_flag}    disable_warnings=${Warning_flag}    
     #login จะไม่มี header แต่จะใช้ data แทน เนื่องจากเส้น post login ไม่มี header และส่งข้อมูลแบบ data
     ${Data}=        Create Dictionary    
-    ...    username=${Username}    
-    ...    password=${Password}
+    ...    username=${username}    
+    ...    password=${password}
+    ${response}=    RequestsLibrary.POST On Session    POST_login    ${Login_path}    data=${Data}    expected_status=200
+
+POST Login Monomax and Get token
+    [Arguments]    ${username}    ${password}
+    [Documentation]    Keyword ยิง post login เพื่อ get token
+    RequestsLibrary.Create Session    POST_login    ${Base_url}    verify=${Verify_flag}    disable_warnings=${Warning_flag}    
+    #login จะไม่มี header แต่จะใช้ data แทน เนื่องจากเส้น post login ไม่มี header และส่งข้อมูลแบบ data
+    ${Data}=        Create Dictionary    
+    ...    username=${username}    
+    ...    password=${password}
     ${response}=    RequestsLibrary.POST On Session    POST_login    ${Login_path}    data=${Data}
     Validate Post Login Response    ${response}
 

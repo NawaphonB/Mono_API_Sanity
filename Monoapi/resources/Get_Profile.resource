@@ -6,7 +6,7 @@ Get Profile Monomax
     [Documentation]    Keyword ยิงเช็ค profile ของ data นั้นๆ
     RequestsLibrary.Create Session    Get_Profile    ${Base_url}    verify=${Verify_flag}    disable_warnings=${Warning_flag}    
     ${headers}=     Authorization Monomax
-    ${response}=    RequestsLibrary.GET On Session    Get_Profile    ${Get_profile_path}    headers=${headers}
+    ${response}=    RequestsLibrary.GET On Session    Get_Profile    ${Get_profile_path}    headers=${headers}    expected_status=200
     Validate Get Profile Response    ${response}    
 
 Validate Get Profile Response

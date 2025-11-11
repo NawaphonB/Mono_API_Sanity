@@ -11,7 +11,7 @@ Get Package Category Monomax
         RequestsLibrary.Create Session    GET_Package_Category    ${Base_url}    verify=${Verify_flag}    disable_warnings=${Warning_flag}    
         ${params}=    Create Dictionary
         ...    category_id=${category_id}
-        ${response}=    RequestsLibrary.GET On Session    GET_Package_Category    ${Package_category_path}    params=${params}
+        ${response}=    RequestsLibrary.GET On Session    GET_Package_Category    ${Package_category_path}    params=${params}    expected_status=200
         Validate Package Category Response    ${response}    ${platform}    ${category_id} 
         END
     END

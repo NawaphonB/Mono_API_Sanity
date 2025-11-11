@@ -7,16 +7,31 @@ warning_flag: true
 username: "testios02"
 password: "123456"
 
+username_freetier: "0912200425"
+password_freetier:  "123456"
+
+username_basic: "nowtest02"
+password_basic: "123456"
+
+username_standard: "phathtest02"
+password_standard: "123456"
+
+default_password: "123456"
+
 # ===== Paths =====
 login_path: "/account/login"
 get_profile_path: "/account/profile"
 packages_path_prefix: "/packages/"
 pre_purchase_path: "/packages/verify_prepurchase"
 live_tv_path: "/livetv/home"
-
+get_product_path: "/products/"
 # ===== Sports demo ids =====
 match_id: 06
 vod_id: 94
+
+#====== Movie & Series ids =====
+series_id: 105383
+movie_id: 
 
 # ===== Iteration params =====
 platform: [ios, android]

@@ -10,7 +10,7 @@ Get Pre-purchase Monomax
     ${params}=    Create Dictionary
     ...    platform=${platform_prepurchase}
     ...    buying_sku=${SKU}
-    ${response}=    GET On Session    GET_Pre-purchase    ${Pre_purchase_path}    params=${params}    headers=${headers}
+    ${response}=    GET On Session    GET_Pre-purchase    ${Pre_purchase_path}    params=${params}    headers=${headers}    expected_status=200
     Validate Pre-purchase Response    ${response}
 
 Validate Pre-purchase Response
