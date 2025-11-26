@@ -19,18 +19,36 @@ for test in root.findall(".//test"):
     status_tag = test.find("./status")
     if status_tag is not None and status_tag.attrib.get("status") == "FAIL":
         fail_count += 1
-        failed_tests.append(test_name)
-
-print(f"Fail count: {fail_count}, Total count: {total_count}")
-print("Failed tests:", failed_tests)
+        # Extract error message from keyword or test failure
+        error_msg = status_tag.text.strip() if status_tag.text else "Unknown error"
+        # Also check for keyword errors within the test
+        keyword_errors = []
+        for kw in test.findall(".//kw"):
+            kw_status = kw.find("./status")
+            if kw_status is not None and kw_status.attrib.get("status") == "FAIL":
+                kw_name = kw.attrib.get("name", "Unknown Keyword")
+                kw_error = kw_status.text.strip() if kw_status.text else "Keyword error"
+                keyword_errors.append(f"🔴 {kw_name}: {kw_error}")
+        failed_tests.append({
+            "name": test_name,
+            "error": error_msg,
+            "keyword_errors": keyword_errors
+        })
 
 if fail_count > 0:
-    failed_list = "\n".join([f"- {name}" for name in failed_tests])
+    # Build detailed error message with keyword errors
+    failed_details = []
+    for test in failed_tests:
+        test_info = f"📌 *{test['name']}*\n"
+        test_info += f"   • Error: {test['error']}\n"
+        if test['keyword_errors']:
+            test_info += "   • Keyword Errors:\n"
+            for kw_error in test['keyword_errors']:
+                test_info += f"     {kw_error}\n"
+        failed_details.append(test_info)
+    
+    failed_list = "\n".join(failed_details)
     message = {
-        "text": f"🚨 Health check alert!!\n❌ {fail_count} test(s) failed out of {total_count}.\n\nFailed tests📂:\n{failed_list}\n"
+        "text": f"🚨 *Health Check Alert!*\n❌ {fail_count} test(s) failed out of {total_count}\n\n{failed_list}"
     }
     response = requests.post(webhook_url, data=json.dumps(message), headers={'Content-Type': 'application/json'})
-    print(f"Webhook response: {response.status_code}, {response.text}")
-else:
-    print("✅ No failures detected. No message sent.")
-    

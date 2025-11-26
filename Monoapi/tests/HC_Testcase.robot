@@ -31,3 +31,6 @@ HC_Get_LiveTV_Home_API
 
 HC_Get_Series_detail_API
     Get Product detail      ${series_id}
+
+HC_Get_Prepurchase_API
+    Get Pre-purchase Monomax     ${platform_prepurchase}    ${SKU2}
