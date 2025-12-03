@@ -7,8 +7,8 @@ warning_flag: true
 username: "testios02"
 password: "123456"
 
-username_freetier: "0912200425"
-password_freetier:  "123456"
+username_freetier: "monoprodtestlive01"
+password_freetier:  "P@ssw0rd1234"
 
 username_basic: "nowtest02"
 password_basic: "123456"
