@@ -16,6 +16,8 @@ password_basic: "123456"
 username_standard: "phathtest02"
 password_standard: "123456"
 
+
+
 default_password: "123456"
 
 # ===== Paths =====
@@ -44,3 +46,27 @@ expected_status_code: 200
 expected_status: "ok"
 #ACCESS_TOKEN:   "yUKrMSJNVRabvjNi5mC3hpbMkUmuDr0DDxoF7Jze"
 
+# ===== Regression  =====
+LN_001_Data: 
+  Username: "Nawaphon.doppio@gmail.com"
+  Password:  "P@ssw0rd1234"
+
+LN_002_Data: 
+  Username: "0625461205"
+  Password:  "P@ssw0rd1234"
+
+LN_006_Data: 
+  Username: "Nawaphon.doppio@gmail.com"
+  Password:  "P@ssw0rd1235"
+
+LN_007_Data: 
+  Username: "0625461205"
+  Password:  "P@ssw0rd1235"
+
+LN_008_Data: 
+  Username: "NotfoundEmailforsure@gmail.com"
+  Password:  "123456"
+
+LN_009_Data: 
+  Username: "0999999999"
+  Password:  "123456"
