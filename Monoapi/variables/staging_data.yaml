@@ -29,3 +29,42 @@ expected_status_code: 200
 expected_status: "ok"
 #ACCESS_TOKEN:   "yUKrMSJNVRabvjNi5mC3hpbMkUmuDr0DDxoF7Jze"
 
+# ===== Regression  =====
+
+LN_001_Data: 
+  Username: "Nawaphon.doppio@gmail.com"
+  Password:  "123456"
+
+LN_002_Data: 
+  Username: "0625461205"
+  Password:  "123456"
+
+LN_006_Data: 
+  Username: "Nawaphon.doppio@gmail.com"
+  Password:  "123457"
+
+LN_007_Data: 
+  Username: "0625461205"
+  Password:  "123457"
+
+LN_008_Data: 
+  Username: "NotfoundEmailforsure@gmail.com"
+  Password:  "123456"
+
+LN_009_Data: 
+  Username: "0999999999"
+  Password:  "123456"
+
+Platform_Data:
+  IOS: "ios"
+  Android: "android"
+  AndroidTV: "androidtv"
+
+PK_004_Data:
+  SKU_IOS_004: "staging_recurring_1d_1m99"
+  SKU_Android_004: "recurring_1d_1m99"
+
+PK_005_Data:
+  SKU_IOS_005: "staging_recurring_1d_1y699"
+  SKU_Android_005: "recurring_1d_1y699"
+  
