@@ -31,6 +31,7 @@ expected_status: "ok"
 
 # ===== Regression  =====
 
+# ===== Login  =====
 LN_001_Data: 
   Username: "Nawaphon.doppio@gmail.com"
   Password:  "123456"
@@ -55,16 +56,57 @@ LN_009_Data:
   Username: "0999999999"
   Password:  "123456"
 
+# ===== Package  =====
+
 Platform_Data:
   IOS: "ios"
   Android: "android"
   AndroidTV: "androidtv"
 
 PK_004_Data:
+  Username: "monotestset01"
+  Password: "123456"
   SKU_IOS_004: "staging_recurring_1d_1m99"
   SKU_Android_004: "recurring_1d_1m99"
 
 PK_005_Data:
+  Username: "monotestset01"
+  Password: "123456"
   SKU_IOS_005: "staging_recurring_1d_1y699"
   SKU_Android_005: "recurring_1d_1y699"
-  
+
+PK_030_Data:
+  Username: "monotestset01"
+  Password: "123456"
+  SKU_IOS_030: "staging_recurring_sports_1d_1m299"
+  SKU_Android_030: "recurring_sports_1d_1m299"
+
+PK_031_Data:
+  Username: "monotestset01"
+  Password: "123456"
+  SKU_IOS_031: "staging_recurring_sports_1d_1y1999"
+  SKU_Android_031: "recurring_sports_1d_1y1999"
+
+PK_043_Data:
+  Username: "Automation001"
+  Password: "123456"
+  SKU_IOS_043: "staging_recurring_sports_1d_1m299"
+  SKU_Android_043: "recurring_sports_1d_1m299"
+
+PK_044_Data: 
+  Username: "Automation001"
+  Password: "123456"
+  SKU_IOS_044: "staging_recurring_sports_1d_1y1999"
+  SKU_Android_044: "recurring_sports_1d_1y1999"
+
+PK_045_Data:
+  Username: "Automation004"
+  Password: "123456"
+  SKU_IOS_045: "staging_recurring_sports_1d_1y1999"
+  SKU_Android_045: "recurring_sports_1d_1y1999"
+
+PK_046_Data:
+  Username: "Automation003"
+  Password: "123456"
+  SKU_IOS_046: "staging_recurring_sports_1d_1m299"
+  SKU_Android_046: "recurring_sports_1d_1m299"

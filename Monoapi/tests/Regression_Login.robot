@@ -24,22 +24,3 @@ LN_008 Fail-Login fail E-mail not found
 LN_009 Fail-Login fail mobile not found
     POST Login Monomax Fail  ${LN_009_Data.Username}    ${LN_009_Data.Password}
 
-PK_004 สมัคร Basic 99 รายเดือนแบบ Recurring ด้วย In app purchase สำเร็จ
-    Get Pre-purchase Monomax     ${Platform_Data.IOS}    ${PK_004_Data.SKU_IOS_004}
-    Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_004_Data.SKU_Android_004}
-    Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_004_Data.SKU_Android_004}
-
-PK_005 สมัคร Basic 699 รายปีแบบ Recurring ด้วย In app purchase สำเร็จ
-    Get Pre-purchase Monomax     ${Platform_Data.IOS}    ${PK_005_Data.SKU_IOS_005}
-    Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_005_Data.SKU_Android_005}
-    Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_005_Data.SKU_Android_005}
-
-PK_030 สมัคร Standard 299 รายเดือนแบบ Recurring ด้วย In app purchase สำเร็จ
-    Get Pre-purchase Monomax     ${Platform_Data.IOS}    ${PK_030_Data.SKU_IOS_030}
-    Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_030_Data.SKU_Android_030}
-    Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_030_Data.SKU_Android_030}
-    
-PK_031 สมัคร Standard 2999 รายปีแบบ Recurring ด้วย In app purchase สำเร็จ
-    Get Pre-purchase Monomax     ${Platform_Data.IOS}    ${PK_031_Data.SKU_IOS_031}
-    Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_031_Data.SKU_Android_031}
-    Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_031_Data.SKU_Android_031}
