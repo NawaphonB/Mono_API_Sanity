@@ -110,3 +110,21 @@ PK_046_Data:
   Password: "123456"
   SKU_IOS_046: "staging_recurring_sports_1d_1m299"
   SKU_Android_046: "recurring_sports_1d_1m299"
+
+PK_048_Data:
+  Username: "Automation003"
+  Password: "123456"
+  SKU_IOS_048: "staging_recurring_sports_1d_1m299"
+  SKU_Android_048: "recurring_sports_1d_1m299"
+
+PK_049_Data:
+  Username: "Automation003"
+  Password: "123456"
+  SKU_IOS_049: "staging_recurring_sports_1d_1m299"
+  SKU_Android_049: "recurring_sports_1d_1m299"
+
+PK_050_Data:
+  Username: "Automation003"
+  Password: "123456"
+  SKU_IOS_050: "staging_recurring_sports_1d_1m299"
+  SKU_Android_050: "recurring_sports_1d_1m299"

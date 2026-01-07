@@ -51,3 +51,22 @@ PK_046 Upgrade จาก Basic ไป Standard ด้วย In app purchase ส�
     Get Pre-purchase Monomax     ${Platform_Data.IOS}    ${PK_046_Data.SKU_IOS_046}
     Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_046_Data.SKU_Android_046}
     Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_046_Data.SKU_Android_046}
+
+PK_048 Downgrade Standard รายปี -> Standard รายเดือน
+    POST Login Monomax and Get token    ${PK_046_Data.Username}     ${PK_046_Data.Password}
+    Get Pre-purchase Monomax     ${Platform_Data.IOS}    ${PK_046_Data.SKU_IOS_046}
+    Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_046_Data.SKU_Android_046}
+    Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_046_Data.SKU_Android_046}
+
+PK_049 Downgrade Standard รายเดือน -> Basic รายเดือน
+    POST Login Monomax and Get token    ${PK_046_Data.Username}     ${PK_046_Data.Password}
+    Get Pre-purchase Monomax     ${Platform_Data.IOS}    ${PK_046_Data.SKU_IOS_046}
+    Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_046_Data.SKU_Android_046}
+    Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_046_Data.SKU_Android_046}
+
+PK_050 Downgrade Standard รายปี -> Basic รายเดือน
+    POST Login Monomax and Get token    ${PK_046_Data.Username}     ${PK_046_Data.Password}
+    Get Pre-purchase Monomax     ${Platform_Data.IOS}    ${PK_046_Data.SKU_IOS_046}
+    Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_046_Data.SKU_Android_046}
+    Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_046_Data.SKU_Android_046}
+
