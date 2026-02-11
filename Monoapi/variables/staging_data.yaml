@@ -162,4 +162,17 @@ PK_050_Data:
   SKU_IOS_050: "staging_recurring_1d_1m99"
   SKU_Android_050: "recurring_1d_1m99"
 
-PK_050_Data:
+# ===== LiveTV  =====
+
+Freetier:
+  Username: "Automation009"
+  Password: "123456"
+
+LiveTV_001_Data:
+  Channels: "1"
+
+LiveTV_002_Data:
+  Channels: "1"
+
+LiveTV_003_Data:
+  Channels: "1"

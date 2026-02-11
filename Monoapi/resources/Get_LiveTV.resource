@@ -18,3 +18,13 @@ Get LiveTV Stream Monomax
     Log To Console    ${response.status_code}
     Log To Console    ${response.text}
     RETURN    ${response}
+
+Get LiveTV Stream Monomax No header
+    [Documentation]    
+    [Arguments]    ${channel_id}
+    RequestsLibrary.Create Session    Get_LiveTV_Stream    ${Base_url}    verify=${Verify_flag}    disable_warnings=${Warning_flag}        
+    ${response}=    RequestsLibrary.GET On Session    Get_LiveTV_Stream    ${live_tv_stream_path}${channel_id}/stream    headers=${headers}    expected_status=200
+    
+    Log To Console    ${response.status_code}
+    Log To Console    ${response.text}
+    RETURN    ${response}
