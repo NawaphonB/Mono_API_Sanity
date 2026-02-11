@@ -13,6 +13,7 @@ get_profile_path: "/account/profile"
 packages_path_prefix: "/packages/"
 pre_purchase_path: "/packages/verify_prepurchase"
 live_tv_path: "/api/v2/livetv/home"
+live_tv_stream_path: "/livetv/channels/"
 
 # ===== Sports demo ids =====
 match_id: 06
@@ -62,6 +63,38 @@ Platform_Data:
   IOS: "ios"
   Android: "android"
   AndroidTV: "androidtv"
+
+Basic_Monthly_IOS:
+  Username: "Automation001"
+  Password: 123456
+
+Basic_Yearly_IOS:
+  Username: "Automation002"
+  Password: 123456
+
+Standard_Monthly_IOS:
+  Username: "Automation005"
+  Password: 123456
+
+Standard_Yearly_IOS:
+  Username: "Automation006"
+  Password: 123456
+
+Basic_Monthly_Android:
+  Username: Automation003
+  Password: 123456
+
+Basic_Yearly_Android:
+  Username: Automation004
+  Password: 123456
+
+Standard_Monthly_Android:
+  Username: Automation007
+  Password: 123456
+
+Standard_Yearly_Android:
+  Username: Automation008
+  Password: 123456
 
 PK_004_Data:
   Username: "monotestset01"
@@ -120,11 +153,13 @@ PK_048_Data:
 PK_049_Data:
   Username: "Automation003"
   Password: "123456"
-  SKU_IOS_049: "staging_recurring_sports_1d_1m299"
-  SKU_Android_049: "recurring_sports_1d_1m299"
+  SKU_IOS_049: "staging_recurring_1d_1m99"
+  SKU_Android_049: "recurring_1d_1m99"
 
 PK_050_Data:
   Username: "Automation003"
   Password: "123456"
-  SKU_IOS_050: "staging_recurring_sports_1d_1m299"
-  SKU_Android_050: "recurring_sports_1d_1m299"
+  SKU_IOS_050: "staging_recurring_1d_1m99"
+  SKU_Android_050: "recurring_1d_1m99"
+
+PK_050_Data:
