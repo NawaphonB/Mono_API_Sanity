@@ -7,6 +7,50 @@ warning_flag: true
 username: "testlogin003"
 password: "123456"
 
+Basic_Monthly_IOS:
+  Username: "Automation001"
+  Password: 123456
+
+Basic_Yearly_IOS:
+  Username: "Automation002"
+  Password: 123456
+
+Standard_Monthly_IOS:
+  Username: "Automation005"
+  Password: 123456
+
+Standard_Yearly_IOS:
+  Username: "Automation006"
+  Password: 123456
+
+Basic_Monthly_Android:
+  Username: Automation003
+  Password: 123456
+
+Basic_Yearly_Android:
+  Username: Automation004
+  Password: 123456
+
+Standard_Monthly_Android:
+  Username: Automation007
+  Password: 123456
+
+Standard_Yearly_Android:
+  Username: Automation008
+  Password: 123456
+
+Basic_Std_Expired_Canceled:
+  Username: Automation010
+  Password: 123456
+
+Standard_Canceled_Active:
+  Username: Automation011
+  Password: 123456
+
+Basic_Canceled_Active:
+  Username: Automation012
+  Password: 123456
+  
 # ===== Paths =====
 login_path: "/account/login"
 get_profile_path: "/account/profile"
@@ -64,37 +108,7 @@ Platform_Data:
   Android: "android"
   AndroidTV: "androidtv"
 
-Basic_Monthly_IOS:
-  Username: "Automation001"
-  Password: 123456
 
-Basic_Yearly_IOS:
-  Username: "Automation002"
-  Password: 123456
-
-Standard_Monthly_IOS:
-  Username: "Automation005"
-  Password: 123456
-
-Standard_Yearly_IOS:
-  Username: "Automation006"
-  Password: 123456
-
-Basic_Monthly_Android:
-  Username: Automation003
-  Password: 123456
-
-Basic_Yearly_Android:
-  Username: Automation004
-  Password: 123456
-
-Standard_Monthly_Android:
-  Username: Automation007
-  Password: 123456
-
-Standard_Yearly_Android:
-  Username: Automation008
-  Password: 123456
 
 PK_004_Data:
   Username: "monotestset01"
