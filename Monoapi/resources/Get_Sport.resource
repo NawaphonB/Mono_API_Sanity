@@ -78,3 +78,9 @@ Get VOD Stream Monomax
     ${response}=    GET On Session    GET_VOD      /sports/vods/${VodID}/streams    headers=${headers}
     Validate Match/VOD Response Match details    ${response}
     Validate Match/VOD Response Upsell action    ${response}
+
+Get VOD Stream Monomax non login
+    [Documentation]    Keyword ยิงเช็คหน้า VOD โดยใช้ VodID นั้นๆ ไม่ใช้ token
+    [Arguments]     ${VodID}
+    Create Session    GET_VOD    ${Base_url}       
+    ${response}=    GET On Session    GET_VOD      /sports/vods/${VodID}/streams    expected_status=401  

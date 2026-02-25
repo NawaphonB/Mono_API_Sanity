@@ -47,3 +47,14 @@ Log Info
     Log To Console    ${message}
     Log    ${message}    INFO
 
+Clear Global Variables
+    FOR    ${var}    IN    \${TOKEN}    \${HEADERS}    \${USER_ID}
+        Set Global Variable    ${var}    ${None}
+    END
+
+
+Teardown Suite
+    Delete All Sessions
+    Clear Global Variables
+
+

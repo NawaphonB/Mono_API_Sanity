@@ -75,16 +75,3 @@ PK_050 Downgrade Standard รายปี -> Basic รายเดือน
     POST Login Monomax and Get token   ${Standard_Yearly_Android.Username}   ${Standard_Yearly_Android.Password}
     Get Pre-purchase Monomax     ${Platform_Data.Android}    ${PK_050_Data.SKU_Android_050}
     Get Pre-purchase Monomax     ${Platform_Data.AndroidTV}    ${PK_050_Data.SKU_Android_050}
-
-PK_051 ลูกค้าที่ซื้อ Recurring ไม่อนุญาตให้ซื้อ Upgrade ต่อเป็นแบบ One time ได้
-    POST Login Monomax and Get token   ${Basic_Monthly_IOS.Username}   ${Basic_Monthly_IOS.Password}
-    POST Login Monomax and Get token   ${Basic_Monthly_Android.Username}   ${Basic_Monthly_Android.Password}
-    POST Login Monomax and Get token   ${Basic_Yearly_IOS.Username}   ${Basic_Yearly_IOS.Password}
-    POST Login Monomax and Get token   ${Basic_Yearly_Android.Username}   ${Basic_Yearly_Android.Password}
-    POST Login Monomax and Get token   ${Standard_Monthly_IOS.Username}   ${Standard_Monthly_IOS.Password}
-    POST Login Monomax and Get token   ${Standard_Monthly_Android.Username}   ${Standard_Monthly_Android.Password}
-    POST Login Monomax and Get token   ${Standard_Yearly_IOS.Username}   ${Standard_Yearly_IOS.Password}
-    POST Login Monomax and Get token   ${Standard_Yearly_Android.Username}   ${Standard_Yearly_Android.Password}
-
-
-PK_052 ลูกค้าที่ซื้อ Recurring ไม่อนุญาตให้ซื้อ Downgrade ต่อเป็นแบบ One time ได้

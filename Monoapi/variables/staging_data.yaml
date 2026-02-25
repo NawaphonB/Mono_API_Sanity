@@ -7,6 +7,10 @@ warning_flag: true
 username: "testlogin003"
 password: "123456"
 
+Freetier:
+  Username: "Automation009"
+  Password: "123456"
+
 Basic_Monthly_IOS:
   Username: "Automation001"
   Password: 123456
@@ -178,15 +182,82 @@ PK_050_Data:
 
 # ===== LiveTV  =====
 
-Freetier:
-  Username: "Automation009"
-  Password: "123456"
+Channels_Freetier: "1"
+Channels_Basic: "10"
+Channels_Standard: "11"
 
 LiveTV_001_Data:
-  Channels: "1"
+  Channels_Freetier: "1"
+  Channels_Basic: "10"
+  Channels_Standard: "11"
 
 LiveTV_002_Data:
-  Channels: "1"
+  Channels_Freetier: "1"
+  Channels_Basic: "10"
+  Channels_Standard: "11"
 
 LiveTV_003_Data:
-  Channels: "1"
+  Channels_Freetier: "1"
+  Channels_Basic: "10"
+  Channels_Standard: "11"
+
+LiveTV_004_Data:
+  Channels_Freetier: "1"
+  Channels_Basic: "10"
+  Channels_Standard: "11"
+
+LiveTV_005_Data:
+  Channels_Freetier: "1" 
+  Channels_Basic: "10"
+  Channels_Standard: "11"
+
+LiveTV_006_Data:
+  Channels_Freetier: "1"
+  Channels_Basic: "10"
+  Channels_Standard: "11"
+
+LiveTV_007_Data:
+  Channels_Freetier: "1"
+  Channels_Basic: "10"
+  Channels_Standard: "11"
+
+LiveTV_008_Data:
+  Channels_Freetier: "1"
+  Channels_Basic: "10"
+  Channels_Standard: "11"
+
+LiveTV_009_Data:
+  Channels_Freetier: "1"
+  Channels_Basic: "10"
+  Channels_Standard: "11"
+
+LiveTV_019_Data:
+  Channels_Hide: "5"
+
+
+# ===== Sport  =====
+
+SP_001_Data:
+  VodID: "94"
+  HighlightID: "96"
+
+SP_002_Data:
+  VodID: "94"
+  HighlightID: "96"
+
+SP_003_Data:
+  VodID: "94"
+  HighlightID: "96"
+
+SP_004_Data:
+  VodID: "94"
+  HighlightID: "96"
+
+SP_005_Data:
+  VodID: "94"
+  HighlightID: "96"
+
+SP_036_Data:
+  LiveID: "6"
+  VodID: "94"
+  HighlightID: "96"
